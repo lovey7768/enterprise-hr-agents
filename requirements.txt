@@ -1,0 +1,5 @@
+pydantic>=2.0,<3
+streamlit>=1.10
+# LangGraph / Groq client placeholders — pin to your internal or vendor packages as needed:
+# langgraph==<version>
+# groq==<version>
