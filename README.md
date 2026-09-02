@@ -12,7 +12,7 @@
 
 **Stateful multi-agent HR automation platform with Human-in-the-Loop approval gates, intelligent resume screening, compliance auditing, and automated HR operations.**
 
-[Features](#-key-features) • [Architecture](#-system-architecture) • [Quick Start](#-quick-start) • [Use Cases](#-use-cases) • [Setup Guide](#-automated-setup-with-google-colab)
+[Features](#-key-features) • [Architecture](#-system-architecture) • [Demo](#-platform-interface) • [Quick Start](#-quick-start) • [Use Cases](#-use-cases)
 
 </div>
 
@@ -147,19 +147,87 @@ Checkpoint gates require manager approval before final decisions, ensuring accou
 
 ---
 
-## 📸 Platform Interface
+## 📸 Platform Interface & Demo Screenshots
 
-### 1. Job Description & Candidate Intake
-Upload job descriptions and candidate resumes with automatic field extraction and validation.
+### Screen 1: Job Description & Candidate Information
+Upload job descriptions and candidate information with automatic field extraction and validation.
 
-### 2. Resume Ingestion & Parsing
+**Features:**
+- 📄 Job description input with requirements parsing
+- 💰 Salary expectation and budget configuration
+- ✅ Work authorization status tracking
+- 🎯 Role-specific budget allocation
+
+![Job Description & Candidate Info](https://raw.githubusercontent.com/lovey7768/enterprise-hr-agents/main/assets/demo-screen-1.png)
+
+> *Streamlined intake form for job descriptions and candidate information with real-time validation*
+
+---
+
+### Screen 2: Resume Ingestion & PDF Upload
 Drag-and-drop PDF resume upload with intelligent text extraction and structured data parsing.
 
-### 3. Screening Results Dashboard
-Real-time match scores, skill gap analysis, and compliance status in one view.
+**Features:**
+- 📤 Drag-and-drop PDF upload
+- 🔍 Automatic text extraction from resumes
+- ✨ Intelligent field recognition (name, email, skills, experience)
+- ✅ Resume parsing success indicator with character count
+- 📋 Raw text preview for verification
 
-### 4. Automated Communications
-Preview and customize generated offer/rejection letters before HR dispatch.
+![Resume Ingestion with PDF Upload](https://raw.githubusercontent.com/lovey7768/enterprise-hr-agents/main/assets/demo-screen-2.png)
+
+> *Candidate resume upload with AI-powered PDF parsing and structured data extraction*
+
+---
+
+### Screen 3: Screening Results & Compliance Audit
+Real-time match scores, skill gap analysis, and compliance status in one comprehensive dashboard.
+
+**Features:**
+- 🎯 Match score (0-100) with decision indicators
+- ✅ Compliance verification (visa, budget fit)
+- 📋 Screening audit with matched vs missing skills
+- 💬 Compliance memo with policy summaries
+- 🎤 Targeted interview question generation
+- ✅ Final HR decision with reject/approve options
+
+![Screening Audit and Compliance Verification](https://raw.githubusercontent.com/lovey7768/enterprise-hr-agents/main/assets/demo-screen-3.png)
+
+> *Real-time screening audit showing match score, compliance status, and targeted interview questions*
+
+---
+
+### Screen 4: Automated Communications & Final Decision
+Preview and customize generated offer/rejection letters before HR dispatch with HITL approval.
+
+**Features:**
+- 📧 Auto-generated rejection/offer letter templates
+- 📝 Customizable email content
+- 🛑 Human-in-the-Loop approval gate
+- ✅ Final decision tracking (Accept/Reject)
+- 📊 Decision rationale and audit trail
+- 🎯 Personalized communication based on screening results
+
+![Final HR Operations & Automated Communication](https://raw.githubusercontent.com/lovey7768/enterprise-hr-agents/main/assets/demo-screen-4.png)
+
+> *Synthesized HR decision with auto-drafted communications and human approval checkpoint*
+
+---
+
+### System Architecture Diagram
+Visual representation of the multi-agent workflow:
+
+**Flow Overview:**
+1. **HR Recruiter** → Uploads job description and candidate resume
+2. **Agent 1** → Screens resume, calculates match score
+3. **Agent 2** → Generates targeted interview questions
+4. **Agent 3** → Audits compliance and budget fit
+5. **🛑 HITL Gate** → Manager reviews and approves
+6. **Agent 4** → Dispatches offer/rejection email
+
+![System Architecture](https://raw.githubusercontent.com/lovey7768/enterprise-hr-agents/main/assets/architecture-diagram.png)
+
+> *Complete system workflow showing multi-agent coordination with human approval gates*
 
 ---
 
@@ -351,6 +419,12 @@ enterprise-hr-agents/
 │   ├── test_agents.py
 │   ├── test_workflow.py
 │   └── integration/
+├── assets/
+│   ├── demo-screen-1.png             # Job description intake screen
+│   ├── demo-screen-2.png             # Resume upload screen
+│   ├── demo-screen-3.png             # Screening results dashboard
+│   ├── demo-screen-4.png             # HR operations & communications
+│   └── architecture-diagram.png      # System architecture
 └── notebooks/
     └── demo.ipynb                    # Interactive demo
 ```
@@ -424,7 +498,7 @@ For more help, see [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
 
 ## 📞 Support & Contact
 
-- 📧 **Email**: [your-email@example.com](mailto:your-email@example.com)
+- 📧 **Email**: [loveymann49@gmail.com](mailto:loveymann49@gmail.com)
 - 🐙 **GitHub Issues**: [Report a bug](https://github.com/lovey7768/enterprise-hr-agents/issues)
 - 💬 **Discussions**: [Ask questions](https://github.com/lovey7768/enterprise-hr-agents/discussions)
 - 🐦 **Twitter**: [@lovey7768](https://twitter.com/lovey7768)
@@ -440,6 +514,7 @@ For more help, see [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
 - ✅ Groq LPU integration
 - ✅ HITL approval gates
 - ✅ Email communication drafts
+- ✅ Comprehensive demo screenshots
 
 ### Roadmap
 - [ ] Database integration (PostgreSQL/MongoDB)
